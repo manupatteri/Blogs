@@ -6,13 +6,14 @@ virtualenv can help you maintain isolated python installations. For eg: for your
 
 pip is used to install specific packages. Its similar to rpm in linux. 
 
-## pip not able to download via CORP firewall
+### Issues
+#### pip not able to download via CORP firewall
 If you are like me and sitting behind a corporate firewall and cannot access an python outside repository and received an invalid certifcate error, you might want to add most common python repositories to the trusted host list in pip.conf or on command line. 
                                             
-## What I did
-### virtualenv
+### What I did
+#### virtualenv
 I seemed to have a virtualenv installed earlier itself. I reused that. 
-### pip 
+#### pip 
 my pip.conf looks like this 
 
     cat $HOME/.config/pip/pip.conf
@@ -23,7 +24,7 @@ my pip.conf looks like this
                    files.pythonhosted.org
                
 
-### packages for parquet               
+#### packages for parquet               
 Using pip I installed pandas etc. 
 
     python -m pip install numpy
@@ -43,3 +44,6 @@ site-packages directory is where python modules gets installed. Though you can k
     python3 -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])'
 
 
+## List all installed packages
+    
+    pip list
