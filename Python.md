@@ -29,5 +29,17 @@ Using pip I installed pandas etc.
     python -m pip install numpy
     python -m pip install pandas
     python -m pip install pyarrow
+ 
+## How to know current site-packages 
+site-packages directory is where python modules gets installed. Though you can know the version of a given python using other commands, you can easily browse different packages, their source code if you know the site packages directory. 
+
+    #Get System level site packages directory
+    python -m site
+
+    #Get User level site packages directory
+    python -m site --user-site
     
+    #Another option
+    python3 -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])'
+
 
