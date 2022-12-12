@@ -5,7 +5,6 @@ You can install Python in different ways. Since I am using Mac, I explored only 
 virtualenv can help you maintain isolated python installations. For eg: for your work you can an official version of python and packages while for some exploration you can keep a different python version and related packages using virtualenv. 
 
 pip is used to install specific packages. Its similar to rpm in linux. 
-
 ### Issues
 #### pip not able to download via CORP firewall
 If you are like me and sitting behind a corporate firewall and cannot access an python outside repository and received an invalid certifcate error, you might want to add most common python repositories to the trusted host list in pip.conf or on command line. 
@@ -47,3 +46,9 @@ site-packages directory is where python modules gets installed. Though you can k
 ## List all installed packages
     
     pip list
+
+## Access python3
+Since python has moved onto python3 and it is available only as python3, it may be handy to create an alias like this. 
+It can be added in ~/.bash_profile
+
+    alias python="python3"
