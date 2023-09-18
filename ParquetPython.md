@@ -12,7 +12,7 @@ In all options, data can be  prepared using well known python libraries such as 
 
 pyarrow table can be easily written to file which we will see below. 
 
-# Options
+# Writing parquet files
 ## pyarrow
 As name suggests, pyarrow is a python library which supports managing Arrow memory format. Since both Arrow and Parquet came from same authors probably even parquet 
 management can be done via pyarrow. 
@@ -31,5 +31,8 @@ Earlier I thought that this is a higher level API  and it doesn't have all optio
     writer.close()
 
 ## fastparquet
-This is a Parquest specific library 
+This is a Parquest specific library. TODO
+
+# Reading parquet files
+
 
