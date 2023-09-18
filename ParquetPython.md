@@ -34,5 +34,13 @@ Earlier I thought that this is a higher level API  and it doesn't have all optio
 This is a Parquest specific library. TODO
 
 # Reading parquet files
+```
+import pyarrow.parquet as pq
+
+parquet_table = pq.read_table('example.parquet')
+
+print(parquet_table.to_pandas())
+
+```
 
 
