@@ -1,4 +1,5 @@
 # How pyarrow writes 
+## python
 We use pyarrow.parquet. 
 
 We use write_table in pyarrow.parquet.
@@ -22,5 +23,15 @@ _parquet is pyarrow._parquet. Ref: https://github.com/apache/arrow/blob/ec41209e
 That seems to be coming from cpython code. https://github.com/apache/arrow/blob/ec41209ea02bdb410bc7e049cb3100afedf4ba2f/python/pyarrow/_parquet.pyx
 
 Which means its in C++ code. 
+
+C++ _parquet is defined https://github.com/apache/arrow/blob/ec41209ea02bdb410bc7e049cb3100afedf4ba2f/python/pyarrow/_parquet.pyx#L2064 and it's write_table is 
+here https://github.com/apache/arrow/blob/ec41209ea02bdb410bc7e049cb3100afedf4ba2f/python/pyarrow/_parquet.pyx#L2167
+
+It essentially calls WriteTable on writer.https://github.com/apache/arrow/blob/ec41209ea02bdb410bc7e049cb3100afedf4ba2f/python/pyarrow/_parquet.pyx#L2181
+
+writer is a FileWriter https://github.com/apache/arrow/blob/main/python/pyarrow/_parquet.pyx#L2066 
+
+## cpp 
+FileWriter is https://github.com/apache/arrow/blob/main/cpp/src/parquet/file_writer.cc
 
 # How pyarrow reads
