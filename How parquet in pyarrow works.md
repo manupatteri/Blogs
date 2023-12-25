@@ -34,4 +34,9 @@ writer is a FileWriter https://github.com/apache/arrow/blob/main/python/pyarrow/
 ## cpp 
 FileWriter is https://github.com/apache/arrow/blob/main/cpp/src/parquet/file_writer.cc
 
+It's implementation is elsewhere in FileWriterImpl https://github.com/apache/arrow/blob/ec41209ea02bdb410bc7e049cb3100afedf4ba2f/cpp/src/parquet/arrow/writer.cc#L281
+
+It implements WriteTable here https://github.com/apache/arrow/blob/ec41209ea02bdb410bc7e049cb3100afedf4ba2f/cpp/src/parquet/arrow/writer.cc#L367
+
+
 # How pyarrow reads
